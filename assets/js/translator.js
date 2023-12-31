@@ -2,7 +2,7 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     {
       pageLanguage: "en", // Idioma original de la página
-      includedLanguages: "en,es", // Idiomas permitidos (inglés y español)
+      includedLanguages: "en,es,pt", // Idiomas permitidos
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
       autoDisplay: false,
     },
