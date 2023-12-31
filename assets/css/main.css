@@ -2283,12 +2283,45 @@ body.is-preload #wrapper {
 .soft-skills-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 25px;
   grid-row-gap: 25px;
 }
 
-.row {
+.soft-skill {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px;
+}
+
+.soft-skill h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.soft-skill p {
+  margin: 0;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Estilos para versiones móviles */
+@media screen and (max-width: 768px) {
+  .soft-skills-container {
+    grid-template-columns: 1fr; /* Cambia a una columna para pantallas más pequeñas */
+    grid-template-rows: auto; /* Altura automática según el contenido */
+  }
+
+  .soft-skill {
+    margin: 10px 0; /* Agrega un espacio entre cada habilidad */
+  }
 }
