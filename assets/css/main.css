@@ -2282,10 +2282,10 @@ body.is-preload #wrapper {
 
 .soft-skills-container {
   display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(3, 1fr);
-grid-column-gap: 25px;
-grid-row-gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
 }
 
 .row {
