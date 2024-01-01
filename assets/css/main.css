@@ -2325,3 +2325,18 @@ body.is-preload #wrapper {
     margin: 10px 0; /* Agrega un espacio entre cada habilidad */
   }
 }
+
+.about-me-container {
+  display: flex;
+  align-items: center;
+}
+
+.about-me-text {
+}
+.about-me-image {
+}
+
+.about-me-img img {
+  max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+}
