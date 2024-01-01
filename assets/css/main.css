@@ -2326,17 +2326,30 @@ body.is-preload #wrapper {
   }
 }
 
-.about-me-container {
-  display: flex;
-  align-items: center;
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
 }
 
 .about-me-text {
-}
-.about-me-image {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 10px;
 }
 
-.about-me-img img {
-  max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
+.about-me-text p {
+  text-align: justify;
+}
+
+.about-me-img {
+  outline: #000 solid 1px;
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
