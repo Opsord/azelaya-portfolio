@@ -1586,6 +1586,7 @@ form input[type="password"],
 form select,
 form textarea {
   -webkit-appearance: none;
+  appearance: none;
   border: 0;
   background: #f4f4f4;
   padding: 0.75em;
@@ -1704,7 +1705,7 @@ button,
   -webkit-transition: background-color 0.25s ease-in-out;
   -ms-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
-  -webkit-appearance: none;
+  appearance: none;
   display: inline-block;
   background-color: #222222;
   color: #ffffff;
@@ -2280,52 +2281,6 @@ body.is-preload #wrapper {
   }
 }
 
-.soft-skills-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
-}
-
-.soft-skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 10px;
-}
-
-.soft-skill h3 {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.soft-skill p {
-  margin: 0;
-  line-height: 1.5;
-  text-align: justify;
-}
-
-/* Estilos para versiones móviles */
-@media screen and (max-width: 768px) {
-  .soft-skills-container {
-    grid-template-columns: 1fr; /* Cambia a una columna para pantallas más pequeñas */
-    grid-template-rows: auto; /* Altura automática según el contenido */
-  }
-
-  .soft-skill {
-    margin: 10px 0; /* Agrega un espacio entre cada habilidad */
-  }
-}
-
 .about-me {
   display: grid;
   grid-template-columns: repeat(1fr, 1fr);
@@ -2341,15 +2296,134 @@ body.is-preload #wrapper {
   margin: 10px;
 }
 
-.about-me-text p {
-  text-align: justify;
-}
-
 .about-me-img {
-  outline: #000 solid 1px;
+  outline: #868686 solid 1px;
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
 }
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si no caben en una sola */
+  justify-content: space-around; /* Distribuye los elementos equitativamente en el contenedor */
+  margin: 10px;
+}
+
+.project {
+  width: calc(33.33% - 20px); /* Ancho del 33.33% con un margen de 10px en cada lado */
+  margin: 10px; /* Espacio entre los proyectos */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho del elemento */
+  border: #868686 solid 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto horizontalmente */
+  box-shadow: #585858 0px 0px 10px;
+  border-radius: 10px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  height: 4rem;
+  line-height: 1.2;
+}
+
+.project-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 7rem;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.project-links a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  width: 50%;
+  line-height: 1.3;
+}
+
+.project-links .button-github {
+  background-color: #333; /* Color de fondo para GitHub */
+  color: #fff; /* Color del texto */
+}
+
+.project-links .button-github:hover {
+  background-color: #555; /* Cambio de color al pasar el ratón sobre el botón */
+}
+
+.tecnologies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.tecnology-type {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.tecnology-type h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tecnology {
+  flex: 1;
+  box-sizing: border-box;
+  border: #868686 solid 1px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;
+  text-align: center;
+  box-shadow: #585858 0px 0px 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.tecnology h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.tecnology img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
