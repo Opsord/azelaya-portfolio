@@ -8,13 +8,13 @@ const About = () => {
                 {/* Info and Stack */}
                 <div className="flex-1">
                     <p className="text-gray-300 text-center md:text-left mb-4">
-                        Soy estudiante de Ingeniería de Ejecución en Informática y Computación
+                        Soy egresado de Ingeniería de Ejecución en Informática y Computación
                         en la Universidad de Santiago de Chile, con experiencia como ayudante de
                         cátedra y laboratorio en diversas asignaturas. Me he desempeñado como Scrum Master
                         y QA en proyectos reales, y desarrollé una herramienta de análisis automático de
                         arquitectura para monolitos Spring Boot. He ocupado tecnologías como Java, React, TypeScript,
                         JavaParser, Docker, GitHub Actions, Jenkins y SonarCloud. Me interesa la
-                        ingeniería de software, la seguridad y la calidad.
+                        ingeniería de software, la arquitectura y la calidad.
                     </p>
                     {/* Tech Stack and CV */}
                     <div className="flex flex-col items-center">
