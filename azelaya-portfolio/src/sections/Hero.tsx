@@ -5,7 +5,10 @@ const Hero = () => {
         <section id="hero" className="h-screen flex items-center justify-center text-center px-4">
             <div>
                 <img
-                    src="/profile.jpg"
+                    src={`${import.meta.env.BASE_URL}profile.jpg`}
+                    onError={(e) => {
+                        e.currentTarget.src = "https://via.placeholder.com/150"
+                    }}
                     alt="Andrés Zelaya"
                     className="w-40 h-40 object-cover rounded-full border-4 border-cyan-400 shadow mx-auto mb-6"
                 />

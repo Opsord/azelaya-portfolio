@@ -26,7 +26,7 @@ const About = () => {
                             </div>
                         </div>
                         <a
-                            href="/CV-AndresZelaya.pdf"
+                            href={`${import.meta.env.BASE_URL}CV-AndresZelaya.pdf`}
                             download
                             className="inline-block mt-2 px-5 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-300 transition"
                         >
