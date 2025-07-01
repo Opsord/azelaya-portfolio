@@ -13,7 +13,7 @@ const Hero = () => {
                     Hola, soy Andrés Zelaya
                 </h1>
                 <p className="text-lg md:text-xl text-gray-400">
-                    Ingeniero de Ejecución en Informática | Desarrollador Fullstack
+                    Egresado de Ingeniería de Ejecución en Informática | Desarrollador Fullstack
                 </p>
             </div>
         </section>
