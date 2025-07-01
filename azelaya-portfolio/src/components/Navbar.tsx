@@ -6,6 +6,7 @@ const Navbar = () => {
             <ul className="flex gap-6 justify-center">
                 <li><a href="#hero" className="hover:text-cyan-400">Inicio</a></li>
                 <li><a href="#about" className="hover:text-cyan-400">Sobre mí</a></li>
+                <li><a href="#trajectory" className="hover:text-cyan-400">Trayectoria</a></li>
                 <li><a href="#projects" className="hover:text-cyan-400">Proyectos</a></li>
                 <li><a href="#contact" className="hover:text-cyan-400">Contacto</a></li>
             </ul>
