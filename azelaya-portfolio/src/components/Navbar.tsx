@@ -4,7 +4,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="w-full px-6 py-4 fixed top-0 bg-gradient-to-r from-gray-800 via-gray-900 to-black shadow-lg z-50">
+        <nav className="w-full px-6 py-4 fixed top-0 bg-linear-to-r from-gray-800 via-gray-900 to-black shadow-lg z-50">
             <div className="flex justify-between items-center max-w-6xl mx-auto">
                 <span className="text-2xl font-extrabold text-cyan-400">Andrés Zelaya</span>
                 <button
@@ -21,7 +21,7 @@ const Navbar = () => {
                     className={`flex-col md:flex-row md:flex gap-2 md:gap-8 justify-center absolute md:static left-0 w-full md:w-auto transition-all duration-300 ease-in
     ${
                         isOpen
-                            ? 'flex top-16 bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-b-xl border-t border-gray-700 shadow-lg'
+                            ? 'flex top-16 bg-linear-to-r from-gray-800 via-gray-900 to-black rounded-b-xl border-t border-gray-700 shadow-lg'
                             : 'hidden md:flex top-[-400px]'
                     }`}
                 >
@@ -30,6 +30,7 @@ const Navbar = () => {
                         { href: "#about", label: "Sobre mí" },
                         { href: "#trajectory", label: "Trayectoria" },
                         { href: "#projects", label: "Proyectos" },
+                        { href: "#certifications", label: "Certificaciones" },
                         { href: "#contact", label: "Contacto" },
                     ].map(({ href, label }) => (
                         <li key={href} className="mx-2">
