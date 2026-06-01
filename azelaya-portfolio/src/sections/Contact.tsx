@@ -1,11 +1,13 @@
-// File: sections/Contact.tsx
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
+    const { trad } = useLanguage();
+
     return (
         <section id="contact" className="min-h-screen px-4 py-20 flex flex-col items-center justify-center bg-gray-900">
-            <h2 className="text-3xl font-semibold mb-6 text-center w-full">Contacto</h2>
+            <h2 className="text-3xl font-semibold mb-6 text-center w-full">{trad('contact.title')}</h2>
             <p className="text-center text-gray-300 mb-8 max-w-xl">
-                ¿Quieres ponerte en contacto conmigo? Puedes escribirme por correo, conectarte en redes profesionales o ver mis proyectos.
+                {trad('contact.description')}
             </p>
             <div className="flex flex-col items-center gap-6 w-full">
                 <div className="flex flex-col items-center w-full">

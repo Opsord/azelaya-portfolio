@@ -6,20 +6,23 @@ import Projects from './sections/Projects';
 import Trajectory from './sections/Trajectory';
 import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
+import { LanguageProvider } from './context/LanguageContext';
 
 const App = () => {
     return (
-        <div className="bg-gray-900 text-white font-sans">
-            <Navbar />
-            <main>
-                <Hero />
-                <About />
-                <Trajectory />
-                <Projects />
-                <Certifications />
-                <Contact />
-            </main>
-        </div>
+        <LanguageProvider>
+            <div className="bg-gray-900 text-white font-sans">
+                <Navbar />
+                <main>
+                    <Hero />
+                    <About />
+                    <Trajectory />
+                    <Projects />
+                    <Certifications />
+                    <Contact />
+                </main>
+            </div>
+        </LanguageProvider>
     );
 };
 

@@ -1,5 +1,6 @@
 // File: sections/Certifications.tsx
 import certificationsData from '../data/certifications.json';
+import { useLanguage } from '../context/LanguageContext';
 
 interface Certification {
     title: string;
@@ -12,14 +13,16 @@ interface Certification {
 const certifications = certificationsData as Certification[];
 
 const Certifications = () => {
+    const { trad } = useLanguage();
+
     return (
         <section id="certifications" className="min-h-screen px-4 py-20 bg-gray-900/50">
             <div className="max-w-5xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-teal-300">
-                    Certificaciones
+                    {trad('certifications.title')}
                 </h2>
                 <p className="text-center text-gray-400 mb-12 max-w-xl mx-auto">
-                    Cursos, especializaciones y credenciales profesionales obtenidas para fortalecer mis habilidades técnicas.
+                    {trad('certifications.subtitle')}
                 </p>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -61,7 +64,7 @@ const Certifications = () => {
                                     rel="noopener noreferrer"
                                     className="inline-flex w-full items-center justify-center gap-2 text-sm font-semibold px-4 py-2 bg-gray-800 hover:bg-cyan-500 hover:text-gray-900 text-cyan-400 rounded-xl border border-cyan-500/20 hover:border-transparent transition-all duration-200 shadow-sm"
                                 >
-                                    <span>Ver Certificado</span>
+                                    <span>{trad('certifications.viewCert')}</span>
                                     <svg
                                         className="w-4 h-4"
                                         fill="none"
