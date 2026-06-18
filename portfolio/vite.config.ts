@@ -13,7 +13,7 @@ const dirname = typeof __dirname === 'undefined' ? path.dirname(fileURLToPath(im
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/portfolio/',
+  base: '/azelaya-portfolio/',
   test: {
     projects: [{
       extends: true,
