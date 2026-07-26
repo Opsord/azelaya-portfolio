@@ -1,8 +1,8 @@
 export const contactTranslations = {
   en: {
     title: "Contact",
-    description: "Want to get in touch? Feel free to write me an email, connect on professional networks, or send a direct message through the form.",
-    heading: "Ready to Connect?",
+    description: "Feel free to reach out by email, LinkedIn, or the form below. I'm always open to new opportunities and conversations.",
+    heading: "Let's talk",
     formName: "Name",
     formEmail: "Email Address",
     formMessage: "Message",
@@ -13,8 +13,8 @@ export const contactTranslations = {
   },
   es: {
     title: "Contacto",
-    description: "¿Quieres ponerte en contacto conmigo? Puedes escribirme por correo, conectarte en redes profesionales o enviarme un mensaje directo con el formulario.",
-    heading: "¿Listo para Conectar?",
+    description: "Escríbeme por correo, LinkedIn o el formulario de abajo. Siempre estoy abierto a nuevas oportunidades y conversaciones.",
+    heading: "Hablemos",
     formName: "Nombre",
     formEmail: "Correo Electrónico",
     formMessage: "Mensaje",

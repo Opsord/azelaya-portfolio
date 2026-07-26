@@ -1,18 +1,18 @@
 export const heroTranslations = {
   en: {
-    badge: "FULLSTACK & BACKEND DEVELOPER",
+    badge: "Backend & Fullstack Developer",
     greeting: "Hi, I'm Andres Zelaya Droguett",
-    heading: "Developing Reliable Software and API Integrations.",
-    description: "Computer and Information Systems Engineer graduated from USACH, focused on building backend services, REST APIs, and practical software solutions.",
-    contactBtn: "Get in Touch",
-    portfolioBtn: "View Portfolio"
+    heading: "I build backend services and APIs that work.",
+    description: "Computer Engineering grad from USACH. I work with Java, Spring Boot, and TypeScript — focused on making things that actually solve problems.",
+    contactBtn: "Get in touch",
+    portfolioBtn: "See my work"
   },
   es: {
-    badge: "DESARROLLADOR FULLSTACK Y BACKEND",
+    badge: "Desarrollador Backend y Fullstack",
     greeting: "Hola, soy Andrés Zelaya Droguett",
-    heading: "Desarrollando software confiable e integraciones de APIs.",
-    description: "Ingeniero de Ejecución en Computación e Informática de la USACH, enfocado en la construcción de servicios backend, APIs REST y soluciones de software prácticas.",
-    contactBtn: "Ponte en contacto",
-    portfolioBtn: "Ver portafolio"
+    heading: "Construyo servicios backend y APIs que funcionan.",
+    description: "Titulado en Ingeniería en Computación de la USACH. Trabajo con Java, Spring Boot y TypeScript — enfocado en hacer cosas que realmente resuelvan problemas.",
+    contactBtn: "Hablemos",
+    portfolioBtn: "Ver proyectos"
   }
 };

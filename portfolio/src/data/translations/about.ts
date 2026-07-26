@@ -1,7 +1,7 @@
 export const aboutTranslations = {
   en: {
     title: "About Me",
-    paragraph: "I am a Computer and Information Systems Engineer graduated from the University of Santiago, Chile. I have professional experience as a Full Stack Developer, Backend Developer, and Junior DB Administrator, focused on integrations with REST APIs, Kafka, and Java with Spring Boot. I have also worked as a Scrum Master and SQA Engineer, with a strong interest in software quality and DevOps.",
+    paragraph: "I'm a Computer Engineering graduate from the University of Santiago, Chile. I've worked on backend development, REST APIs, and integrations using Java with Spring Boot. I've also had experience with QA, Scrum, and basic DevOps — always trying to improve and learn.",
     philosophyTitle: "My Approach",
     philosophy1Title: "Code Quality",
     philosophy1Desc: "I value clean, modular, and easy-to-maintain code. I try to implement automated tests and write clear documentation to make projects sustainable over time.",
@@ -19,7 +19,7 @@ export const aboutTranslations = {
   },
   es: {
     title: "Sobre mí",
-    paragraph: "Soy titulado de Ingeniería de Ejecución en Computación e Informática por la Universidad de Santiago de Chile. Cuento con experiencia profesional como Desarrollador Full Stack, Backend y Administrador de BD Junior, enfocado en integraciones mediante APIs REST, Kafka y Java con Spring Boot. También me he desempeñado como Scrum Master e Ingeniero SQA, con un gran interés por la calidad de software y prácticas DevOps.",
+    paragraph: "Soy titulado en Ingeniería en Computación de la Universidad de Santiago, Chile. He trabajado en desarrollo backend, APIs REST e integraciones con Java y Spring Boot. También tuve experiencia en QA, Scrum y DevOps básico — siempre intentando mejorar y aprender.",
     philosophyTitle: "Mi Enfoque",
     philosophy1Title: "Calidad de Código",
     philosophy1Desc: "Valoro el código limpio, modular y fácil de mantener. Intento implementar pruebas automatizadas y escribir documentación clara para que los proyectos sean sostenibles en el tiempo.",
