@@ -5,12 +5,6 @@ export const projectsTranslations = {
     tools: "Tools",
     role: "Role",
     tasks: "Tasks",
-    complexity: {
-      label: "Complexity",
-      high: "High",
-      medium: "Medium",
-      low: "Low"
-    },
     repo: {
       view: "View repository",
       unavailable: "Repository unavailable"
@@ -27,12 +21,11 @@ export const projectsTranslations = {
           "Tool design and development",
           "Source code analysis",
           "Detection of architectural bad practices"
-        ],
-        complexity: "high"
+        ]
       },
       {
-        title: "Scrum Master & QA Automation at RosenmannLópez",
-        description: "Served as QA and Scrum Master in the development team. Coordinated sprints and ensured quality standards for the web project of RosenmannLópez architecture firm.",
+        title: "Scrum Master & QA Automation at RosenmannLopez",
+        description: "Served as QA and Scrum Master in the development team. Coordinated sprints and ensured quality standards for the web project of RosenmannLopez architecture firm.",
         languages: ["JavaScript", "TypeScript"],
         tools: ["React", "GitHub Actions", "Docker", "SonarCloud"],
         role: "QA & Scrum Master",
@@ -40,8 +33,7 @@ export const projectsTranslations = {
           "Automation of CI/CD pipelines",
           "Code quality reviews",
           "Facilitating Scrum ceremonies"
-        ],
-        complexity: "medium"
+        ]
       }
     ]
   },
@@ -51,12 +43,6 @@ export const projectsTranslations = {
     tools: "Herramientas",
     role: "Rol",
     tasks: "Tareas",
-    complexity: {
-      label: "Complejidad",
-      high: "Alta",
-      medium: "Media",
-      low: "Baja"
-    },
     repo: {
       view: "Ver repositorio",
       unavailable: "Repositorio no disponible"
@@ -73,8 +59,7 @@ export const projectsTranslations = {
           "Diseño y desarrollo de la herramienta",
           "Análisis de código fuente",
           "Detección de malas prácticas arquitectónicas"
-        ],
-        complexity: "high"
+        ]
       },
       {
         title: "Scrum Master y Automatización QA en RosenmannLópez",
@@ -86,8 +71,7 @@ export const projectsTranslations = {
           "Automatización de pipelines de CI/CD",
           "Revisión de calidad de código",
           "Facilitación de ceremonias Scrum"
-        ],
-        complexity: "medium"
+        ]
       }
     ]
   }

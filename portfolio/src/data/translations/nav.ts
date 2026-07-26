@@ -5,7 +5,9 @@ export const navTranslations = {
     trajectory: "Trajectory",
     projects: "Projects",
     certifications: "Certifications",
-    contact: "Contact"
+    contact: "Contact",
+    skipToContent: "Skip to main content",
+    toggleTheme: "Toggle dark mode"
   },
   es: {
     hero: "Inicio",
@@ -13,6 +15,8 @@ export const navTranslations = {
     trajectory: "Trayectoria",
     projects: "Proyectos",
     certifications: "Certificaciones",
-    contact: "Contacto"
+    contact: "Contacto",
+    skipToContent: "Saltar al contenido principal",
+    toggleTheme: "Alternar modo oscuro"
   }
 };

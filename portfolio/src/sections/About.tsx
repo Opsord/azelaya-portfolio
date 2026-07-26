@@ -1,34 +1,151 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
+import { TechBadge } from '../components/TechIcon';
 
 const About = () => {
     const { trad } = useLanguage();
 
+    const languagesStack = [
+        { name: 'javascript' as const, label: 'JavaScript' },
+        { name: 'typescript' as const, label: 'TypeScript' },
+        { name: 'java' as const, label: 'Java' },
+        { name: 'python' as const, label: 'Python' },
+        { name: 'html5' as const, label: 'HTML5' },
+        { name: 'css3' as const, label: 'CSS3' },
+        { name: 'react' as const, label: 'React' },
+        { name: 'spring' as const, label: 'Spring' },
+        { name: 'nestjs' as const, label: 'NestJS' },
+    ];
+
+    const devopsStack = [
+        { name: 'docker' as const, label: 'Docker' },
+        { name: 'kubernetes' as const, label: 'Kubernetes' },
+        { name: 'jenkins' as const, label: 'Jenkins' },
+        { name: 'nginx' as const, label: 'Nginx' },
+        { name: 'git' as const, label: 'Git' },
+        { name: 'github' as const, label: 'GitHub' },
+        { name: 'postman' as const, label: 'Postman' },
+        { name: 'postgresql' as const, label: 'PostgreSQL' },
+        { name: 'mysql' as const, label: 'MySQL' },
+        { name: 'latex' as const, label: 'LaTeX' },
+    ];
+
     return (
-        <section id="about" className="min-h-screen px-4 py-20">
-            <h2 className="text-3xl font-semibold mb-6 text-center">{trad('about.title')}</h2>
-            <div className="flex flex-col md:flex-row items-center max-w-3xl mx-auto gap-8">
-                {/* Info and Stack */}
-                <div className="flex-1">
-                    <p className="text-gray-300 text-center md:text-left mb-4">
-                        {trad('about.paragraph')}
-                    </p>
-                    {/* Tech Stack and CV */}
-                    <div className="flex flex-col items-center">
-                        <div className="mb-4">
-                            <h3 className="text-lg font-semibold mb-2 text-cyan-300 text-center">{trad('about.techStack')}</h3>
-                            <div className="flex flex-wrap justify-center gap-2">
-                                <img src="https://skillicons.dev/icons?i=js,ts,java,python,html,css,react,spring,nestjs" alt="Languages, Frameworks & Libraries" />
-                                <img src="https://skillicons.dev/icons?i=docker,kubernetes,jenkins,nginx,git,github,postman,postgres,mysql,latex" alt="DevOps, Databases & Others" />
+        <section id="about" className="py-24 bg-surface-container-low relative">
+            {/* Background glowing gradient */}
+            <div className="absolute top-[30%] right-[5%] w-[25vw] h-[25vw] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+
+            <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop z-10 relative">
+                {/* Bento Row 1: About Me intro (left) + My Approach (right) */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+                    {/* Left: About Me intro card */}
+                    <div className="p-8 bg-surface-container border border-outline-variant/30 rounded-sm flex flex-col justify-center">
+                        <div className="w-12 h-0.5 bg-primary mb-5"></div>
+                        <h2 className="font-display text-3xl md:text-4xl font-bold text-on-background mb-5">
+                            {trad('about.title')}
+                        </h2>
+                        <p className="font-sans text-base md:text-lg text-on-surface-variant leading-relaxed">
+                            {trad('about.paragraph')}
+                        </p>
+                    </div>
+
+                    {/* Right: My Approach */}
+                    <div className="flex flex-col">
+                        <h3 className="font-display text-xl md:text-2xl font-bold text-on-background mb-6 flex items-center gap-3 shrink-0">
+                            <span className="w-10 h-0.5 bg-primary"></span>
+                            {trad('about.philosophyTitle')}
+                        </h3>
+
+                        <div className="flex flex-col gap-4 grow">
+                            {/* Card 1 */}
+                            <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5">
+                                <div className="flex items-start gap-4">
+                                    <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
+                                        <span className="material-symbols-outlined icon-filled text-3xl leading-none">
+                                            verified
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
+                                            {trad('about.philosophy1Title')}
+                                        </h4>
+                                        <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
+                                            {trad('about.philosophy1Desc')}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5">
+                                <div className="flex items-start gap-4">
+                                    <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
+                                        <span className="material-symbols-outlined icon-filled text-3xl leading-none">
+                                            groups
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
+                                            {trad('about.philosophy2Title')}
+                                        </h4>
+                                        <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
+                                            {trad('about.philosophy2Desc')}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a
-                            href={`${import.meta.env.BASE_URL}CV-AndresZelaya.pdf`}
-                            download
-                            className="inline-block mt-2 px-5 py-2 bg-cyan-400 text-gray-900 font-semibold rounded hover:bg-cyan-300 transition"
-                        >
-                            {trad('about.downloadCv')}
-                        </a>
                     </div>
+                </div>
+
+                {/* Bento Row 2: Tech Stack — full width, extended */}
+                <div className="mt-10">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-on-background mb-6 flex items-center gap-3">
+                        <span className="w-10 h-0.5 bg-primary"></span>
+                        {trad('about.techStack')}
+                    </h3>
+
+                    <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm space-y-5">
+                        <div>
+                            <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
+                                Languages, Frameworks & Libraries
+                            </span>
+                            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-2">
+                                {languagesStack.map((tech) => (
+                                    <TechBadge
+                                        key={tech.name}
+                                        name={tech.name}
+                                        label={tech.label}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="pt-3 border-t border-outline-variant/10">
+                            <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
+                                DevOps, Databases & Tools
+                            </span>
+                            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-2">
+                                {devopsStack.map((tech) => (
+                                    <TechBadge
+                                        key={tech.name}
+                                        name={tech.name}
+                                        label={tech.label}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* CV Download — centered, below bento */}
+                <div className="flex justify-center mt-12 pt-8 border-t border-outline-variant/15">
+                    <a
+                        href={`${import.meta.env.BASE_URL}CV_Andres_Zelaya.pdf`}
+                        download
+                        className="inline-flex items-center gap-3 bg-primary text-on-primary px-10 py-4 font-mono text-xs font-bold tracking-wider uppercase hover:brightness-110 active:scale-95 transition-all clip-chamfer-btn shadow-lg shadow-primary/10"
+                    >
+                        <span className="material-symbols-outlined text-base">download</span>
+                        {trad('about.downloadCv')}
+                    </a>
                 </div>
             </div>
         </section>
