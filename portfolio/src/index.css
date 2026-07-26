@@ -5,10 +5,10 @@
   --color-on-primary: #ffffff;
   --color-primary-container: rgba(27, 154, 170, 0.08);
   --color-on-primary-container: #1b9aaa;
-  
+
   --color-background: #f7f9fc;
   --color-on-background: #1f2937;
-  
+
   --color-surface: #ffffff;
   --color-surface-dim: #f1f5f9;
   --color-surface-bright: #ffffff;
@@ -17,18 +17,18 @@
   --color-surface-container: #ffffff;
   --color-surface-container-high: #e2e8f0;
   --color-surface-container-highest: #cbd5e1;
-  
+
   --color-on-surface: #1f2937;
   --color-on-surface-variant: #475569;
-  
+
   --color-secondary: #2ec4b6;
   --color-on-secondary: #ffffff;
   --color-secondary-container: rgba(46, 196, 182, 0.08);
   --color-on-secondary-container: #2ec4b6;
-  
+
   --color-outline: #94a3b8;
   --color-outline-variant: #cbd5e1;
-  
+
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-display: 'Manrope', sans-serif;
@@ -39,11 +39,38 @@
   --max-width-container-max: 1200px;
 }
 
+/* Dark mode token overrides */
+.dark {
+  --color-background: #0b1220;
+  --color-on-background: #e2e8f0;
+
+  --color-surface: #111a2c;
+  --color-surface-dim: #0f172a;
+  --color-surface-bright: #1e293b;
+  --color-surface-container-lowest: #0b1220;
+  --color-surface-container-low: #111a2c;
+  --color-surface-container: #15203a;
+  --color-surface-container-high: #1e2a47;
+  --color-surface-container-highest: #2a3a5c;
+
+  --color-on-surface: #e2e8f0;
+  --color-on-surface-variant: #94a3b8;
+
+  --color-outline: #475569;
+  --color-outline-variant: #334155;
+
+  --color-primary-container: rgba(27, 154, 170, 0.15);
+  --color-secondary-container: rgba(46, 196, 182, 0.15);
+
+  color-scheme: dark;
+}
+
 body {
   scroll-behavior: smooth;
   background-color: var(--color-background);
   color: var(--color-on-background);
   font-family: var(--font-sans);
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 /* Material Symbols Outlined settings */
@@ -99,6 +126,15 @@ body {
   filter: brightness(0.98);
 }
 
+.dark .glow-pulse {
+  box-shadow: 0 4px 20px -5px rgba(27, 154, 170, 0.35);
+}
+
+.dark .glow-hover:hover {
+  box-shadow: 0 10px 25px -5px rgba(27, 154, 170, 0.5);
+  filter: brightness(1.1);
+}
+
 /* Bento custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -112,4 +148,56 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-outline);
+}
+
+/* Skip-to-content link (a11y) */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 200ms ease-in-out;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--color-on-primary);
+  outline-offset: 2px;
+}
+
+/* Global focus-visible outline for keyboard users (a11y) */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Remove default focus outline when :focus-visible is supported and we have our own */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+/* Buttons with clip-path need box-shadow fallback since outline gets clipped */
+button:focus-visible,
+a:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary);
+}
+
+/* Respect user's reduced motion preference (a11y) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

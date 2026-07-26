@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react-vite'
 import { LanguageProvider } from '../src/context/LanguageContext'
+import { ThemeProvider } from '../src/context/ThemeContext'
 import '../src/index.css'
 
 const preview: Preview = {
@@ -21,7 +22,9 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <LanguageProvider>
-        <Story />
+        <ThemeProvider>
+          <Story />
+        </ThemeProvider>
       </LanguageProvider>
     ),
   ],

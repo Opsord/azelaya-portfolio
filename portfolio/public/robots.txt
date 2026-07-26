@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Opsord.github.io/azelaya-portfolio/sitemap.xml

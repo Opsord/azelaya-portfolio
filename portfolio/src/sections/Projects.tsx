@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 
 interface Project {
     title: string;
@@ -9,12 +9,11 @@ interface Project {
     tools: string[];
     role: string;
     tasks: string[];
-    complexity: 'high' | 'medium' | 'low';
 }
 
 const Projects = () => {
-    const { trad } = useLanguage();
-    const projects = trad('projects.items') as Project[];
+    const { trad, tradTyped } = useLanguage();
+    const projects = tradTyped<Project[]>('projects.items');
 
     return (
         <section id="projects" className="py-24 bg-surface-container-low relative">

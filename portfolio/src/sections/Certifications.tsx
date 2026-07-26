@@ -1,5 +1,5 @@
 import certificationsData from '../data/certifications.json';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 
 interface Certification {
     title: string;
@@ -77,7 +77,7 @@ const Certifications = () => {
                                     href={`${import.meta.env.BASE_URL}certs/${cert.pdfFile}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex w-full items-center justify-center gap-2 font-mono text-xs font-bold py-2.5 bg-primary/5 border border-primary/25 hover:bg-primary hover:border-transparent hover:text-white text-primary transition-all duration-200 clip-chamfer-btn shadow-sm"
+                                    className="inline-flex w-full items-center justify-center gap-2 font-mono text-xs font-bold py-2.5 bg-primary/5 border border-primary/25 hover:bg-primary hover:border-transparent hover:text-on-primary text-primary transition-all duration-200 clip-chamfer-btn shadow-sm"
                                 >
                                     <span>{trad('certifications.viewCert')}</span>
                                     <span className="material-symbols-outlined text-sm">open_in_new</span>

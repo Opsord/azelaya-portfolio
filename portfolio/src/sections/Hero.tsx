@@ -1,4 +1,4 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 
 const Hero = () => {
     const { trad } = useLanguage();
@@ -47,7 +47,7 @@ const Hero = () => {
                     <div className="flex flex-wrap justify-center md:justify-start gap-4">
                         <a
                             href="#contact"
-                            className="bg-primary text-white px-8 py-3.5 hover:brightness-110 active:scale-95 transition-all font-mono text-xs font-bold tracking-wider uppercase clip-chamfer-btn shadow-lg shadow-primary/20"
+                            className="bg-primary text-on-primary px-8 py-3.5 hover:brightness-110 active:scale-95 transition-all font-mono text-xs font-bold tracking-wider uppercase clip-chamfer-btn shadow-lg shadow-primary/20"
                         >
                             <span className="flex items-center gap-2">
                                 {trad('hero.contactBtn')}
@@ -75,9 +75,13 @@ const Hero = () => {
                             <img
                                 src={`${import.meta.env.BASE_URL}profile.jpg`}
                                 onError={(e) => {
-                                    e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400";
+                                    e.currentTarget.src = `${import.meta.env.BASE_URL}profile-fallback.svg`;
                                 }}
                                 alt="Andrés Zelaya Droguett"
+                                loading="lazy"
+                                decoding="async"
+                                width="400"
+                                height="400"
                                 className="w-full h-full object-cover grayscale-20% hover:grayscale-0 transition-all duration-700 hover:scale-102"
                             />
                         </div>

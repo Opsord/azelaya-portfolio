@@ -1,7 +1,33 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
+import { TechBadge } from '../components/TechIcon';
 
 const About = () => {
     const { trad } = useLanguage();
+
+    const languagesStack = [
+        { name: 'javascript' as const, label: 'JavaScript' },
+        { name: 'typescript' as const, label: 'TypeScript' },
+        { name: 'java' as const, label: 'Java' },
+        { name: 'python' as const, label: 'Python' },
+        { name: 'html5' as const, label: 'HTML5' },
+        { name: 'css3' as const, label: 'CSS3' },
+        { name: 'react' as const, label: 'React' },
+        { name: 'spring' as const, label: 'Spring' },
+        { name: 'nestjs' as const, label: 'NestJS' },
+    ];
+
+    const devopsStack = [
+        { name: 'docker' as const, label: 'Docker' },
+        { name: 'kubernetes' as const, label: 'Kubernetes' },
+        { name: 'jenkins' as const, label: 'Jenkins' },
+        { name: 'nginx' as const, label: 'Nginx' },
+        { name: 'git' as const, label: 'Git' },
+        { name: 'github' as const, label: 'GitHub' },
+        { name: 'postman' as const, label: 'Postman' },
+        { name: 'postgresql' as const, label: 'PostgreSQL' },
+        { name: 'mysql' as const, label: 'MySQL' },
+        { name: 'latex' as const, label: 'LaTeX' },
+    ];
 
     return (
         <section id="about" className="py-24 bg-surface-container-low relative">
@@ -76,7 +102,7 @@ const About = () => {
                             <a
                                 href={`${import.meta.env.BASE_URL}CV_Andres_Zelaya.pdf`}
                                 download
-                                className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 font-mono text-xs font-bold tracking-wider uppercase hover:brightness-110 active:scale-95 transition-all clip-chamfer-btn shadow-lg shadow-primary/10"
+                                className="inline-flex items-center gap-3 bg-primary text-on-primary px-8 py-4 font-mono text-xs font-bold tracking-wider uppercase hover:brightness-110 active:scale-95 transition-all clip-chamfer-btn shadow-lg shadow-primary/10"
                             >
                                 <span className="material-symbols-outlined text-base">download</span>
                                 {trad('about.downloadCv')}
@@ -126,29 +152,33 @@ const About = () => {
                             <h4 className="font-display text-sm font-bold text-on-background mb-4 uppercase tracking-wider">
                                 {trad('about.techStack')}
                             </h4>
-                            <div className="space-y-4">
-                                <div className="flex flex-col gap-2">
-                                    <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider">
+                            <div className="space-y-5">
+                                <div>
+                                    <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
                                         Languages, Frameworks & Libraries
                                     </span>
-                                    <div className="flex flex-wrap gap-2 py-1">
-                                        <img 
-                                            src="https://skillicons.dev/icons?i=js,ts,java,python,html,css,react,spring,nestjs" 
-                                            alt="Languages, Frameworks & Libraries" 
-                                            className="h-9 object-contain"
-                                        />
+                                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
+                                        {languagesStack.map((tech) => (
+                                            <TechBadge
+                                                key={tech.name}
+                                                name={tech.name}
+                                                label={tech.label}
+                                            />
+                                        ))}
                                     </div>
                                 </div>
-                                <div className="flex flex-col gap-2 pt-2 border-t border-outline-variant/10">
-                                    <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider">
+                                <div className="pt-3 border-t border-outline-variant/10">
+                                    <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
                                         DevOps, Databases & Tools
                                     </span>
-                                    <div className="flex flex-wrap gap-2 py-1">
-                                        <img 
-                                            src="https://skillicons.dev/icons?i=docker,kubernetes,jenkins,nginx,git,github,postman,postgres,mysql,latex" 
-                                            alt="DevOps, Databases & Others" 
-                                            className="h-9 object-contain"
-                                        />
+                                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
+                                        {devopsStack.map((tech) => (
+                                            <TechBadge
+                                                key={tech.name}
+                                                name={tech.name}
+                                                label={tech.label}
+                                            />
+                                        ))}
                                     </div>
                                 </div>
                             </div>

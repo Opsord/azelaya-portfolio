@@ -1,4 +1,4 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 
 interface RoadmapItem {
     title: string;
@@ -9,8 +9,8 @@ interface RoadmapItem {
 }
 
 const Trajectory = () => {
-    const { trad } = useLanguage();
-    const roadmapItems = trad('trajectory.items') as RoadmapItem[];
+    const { trad, tradTyped } = useLanguage();
+    const roadmapItems = tradTyped<RoadmapItem[]>('trajectory.items');
 
     return (
         <section id="trajectory" className="py-24 bg-surface relative overflow-hidden">

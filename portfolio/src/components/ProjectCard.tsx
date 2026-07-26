@@ -1,4 +1,4 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../hooks/useLanguage';
 
 type ProjectCardProps = {
     title: string;
@@ -8,7 +8,6 @@ type ProjectCardProps = {
     tools: string[];
     role: string;
     tasks: string[];
-    complexity: 'high' | 'medium' | 'low';
 };
 
 const ProjectCard = ({
