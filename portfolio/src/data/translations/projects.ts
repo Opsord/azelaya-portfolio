@@ -24,8 +24,8 @@ export const projectsTranslations = {
         ]
       },
       {
-        title: "Scrum Master & QA Automation at RosenmannLópez",
-        description: "Served as QA and Scrum Master in the development team. Coordinated sprints and ensured quality standards for the web project of RosenmannLópez architecture firm.",
+        title: "Scrum Master & QA Automation at RosenmannLopez",
+        description: "Served as QA and Scrum Master in the development team. Coordinated sprints and ensured quality standards for the web project of RosenmannLopez architecture firm.",
         languages: ["JavaScript", "TypeScript"],
         tools: ["React", "GitHub Actions", "Docker", "SonarCloud"],
         role: "QA & Scrum Master",

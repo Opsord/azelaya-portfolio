@@ -32,7 +32,7 @@ export const trajectoryTranslations = {
       },
       {
         title: "Scrum Master and SQA Lead",
-        organization: "RosenmannLópez Arquitectos · Internship",
+        organization: "RosenmannLopez Arquitectos · Internship",
         period: "Oct. 2024 - Jan. 2025",
         location: "Santiago, Chile",
         description: "Participated in the project as a DevOps, SQA Engineer, and Scrum Master, automating quality review processes with SonarCloud and configuring CI/CD pipelines with GitHub Actions and Docker. As SQA, collaborated on overseeing code quality standards, verifying proper class organization, and promoting best practices within the team. As Scrum Master, facilitated agile team ceremonies, promoting collaboration, removing blockers, and ensuring sprint goals were met."

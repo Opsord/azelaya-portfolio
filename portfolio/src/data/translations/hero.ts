@@ -1,7 +1,7 @@
 export const heroTranslations = {
   en: {
     badge: "FULLSTACK & BACKEND DEVELOPER",
-    greeting: "Hi, I'm Andrés Zelaya Droguett",
+    greeting: "Hi, I'm Andres Zelaya Droguett",
     heading: "Developing Reliable Software and API Integrations.",
     description: "Computer and Information Systems Engineer graduated from USACH, focused on building backend services, REST APIs, and practical software solutions.",
     contactBtn: "Get in Touch",
