@@ -19,15 +19,8 @@ const ProjectCard = ({
                          tools,
                          role,
                          tasks,
-                         complexity,
                      }: ProjectCardProps) => {
     const { trad } = useLanguage();
-
-    const complexityColors = {
-        high: "border-red-500/30 text-red-400 bg-red-500/5",
-        medium: "border-amber-500/30 text-amber-400 bg-amber-500/5",
-        low: "border-emerald-500/30 text-emerald-400 bg-emerald-500/5"
-    };
 
     return (
         <div className="bg-surface-container border border-outline-variant/30 hover:border-primary/45 transition-all duration-300 p-6 flex flex-col justify-between h-full relative group hover:shadow-lg hover:shadow-primary/5 clip-chamfer-tr">
@@ -37,11 +30,6 @@ const ProjectCard = ({
                     <h3 className="font-display text-lg font-bold text-on-background group-hover:text-primary transition-colors">
                         {title}
                     </h3>
-                    
-                    {/* Complexity Tag */}
-                    <span className={`font-mono text-[10px] font-semibold px-2 py-0.5 border rounded-sm ${complexityColors[complexity]}`}>
-                        {trad(`projects.complexity.${complexity}`)}
-                    </span>
                 </div>
 
                 {/* Repository Link */}
@@ -107,8 +95,8 @@ const ProjectCard = ({
                 {/* Tasks List */}
                 <div className="space-y-1.5">
                     {tasks.map((task) => (
-                        <div key={task} className="flex items-start gap-2 text-xs text-on-surface-variant leading-normal">
-                            <span className="material-symbols-outlined icon-filled text-primary text-sm mt-0.5 shrink-0">
+                        <div key={task} className="flex items-center gap-2 text-xs text-on-surface-variant leading-normal">
+                            <span className="material-symbols-outlined icon-filled text-primary text-sm shrink-0 select-none">
                                 arrow_right
                             </span>
                             <span>{task}</span>

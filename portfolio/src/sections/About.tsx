@@ -74,7 +74,7 @@ const About = () => {
                         {/* CV Downloader Panel */}
                         <div className="pt-6">
                             <a
-                                href={`${import.meta.env.BASE_URL}CV-AndresZelaya.pdf`}
+                                href={`${import.meta.env.BASE_URL}CV_Andres_Zelaya.pdf`}
                                 download
                                 className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 font-mono text-xs font-bold tracking-wider uppercase hover:brightness-110 active:scale-95 transition-all clip-chamfer-btn shadow-lg shadow-primary/10"
                             >
@@ -86,13 +86,12 @@ const About = () => {
 
                     {/* Right Column: Quotes, Stats & Tech Stack */}
                     <div className="flex flex-col justify-between space-y-8 h-full">
-                        {/* Quote Block */}
-                        <blockquote className="border-l-4 border-primary pl-6 py-3 bg-surface-container/30 rounded-r-md">
-                            <p className="font-display text-lg md:text-xl italic text-on-surface leading-relaxed mb-3">
+                        {/* Quote Block / Guiding Principle */}
+                        <div className="border-l-4 border-primary pl-6 py-3 bg-surface-container/30 rounded-r-md">
+                            <p className="font-sans text-sm md:text-base italic text-on-surface-variant leading-relaxed">
                                 "{trad('about.quote')}"
                             </p>
-                            <footer className="font-mono text-xs font-bold tracking-widest text-primary uppercase">— ANDRÉS ZELAYA</footer>
-                        </blockquote>
+                        </div>
 
                         {/* Stats Grid */}
                         <div className="grid grid-cols-2 gap-6 bg-surface-container-low p-2 rounded-sm">

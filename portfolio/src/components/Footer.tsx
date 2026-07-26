@@ -9,13 +9,13 @@ const Footer = () => {
                         terminal
                     </span>
                     <span className="font-mono text-xs font-bold tracking-wider text-on-surface uppercase">
-                        ANDRÉS ZELAYA
+                        ANDRÉS ZELAYA DROGUETT
                     </span>
                 </div>
                 
                 {/* Copyright */}
                 <p className="font-mono text-[10px] text-on-surface-variant/70">
-                    &copy; {new Date().getFullYear()} Andrés Zelaya. All rights reserved.
+                    &copy; {new Date().getFullYear()} Andrés Zelaya Droguett. All rights reserved.
                 </p>
                 
                 {/* Quick Social Links */}

@@ -41,7 +41,7 @@ const Navbar = () => {
                         terminal
                     </span>
                     <span className="font-display text-lg md:text-xl font-bold tracking-wider text-primary select-none uppercase">
-                        ANDRÉS ZELAYA
+                        ANDRÉS ZELAYA DROGUETT
                     </span>
                 </div>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
 
                     {/* Download CV button */}
                     <a
-                        href={`${import.meta.env.BASE_URL}CV-AndresZelaya.pdf`}
+                        href={`${import.meta.env.BASE_URL}CV_Andres_Zelaya.pdf`}
                         download
                         className="bg-primary text-white px-5 py-1.5 font-mono text-xs font-semibold hover:brightness-110 active:scale-95 transition-all clip-chamfer-btn shadow-md shadow-primary/20"
                     >
@@ -116,7 +116,7 @@ const Navbar = () => {
                         </a>
                     ))}
                     <a
-                        href={`${import.meta.env.BASE_URL}CV-AndresZelaya.pdf`}
+                        href={`${import.meta.env.BASE_URL}CV_Andres_Zelaya.pdf`}
                         download
                         onClick={() => setIsOpen(false)}
                         className="bg-primary text-white text-center py-3 font-mono text-sm font-semibold hover:brightness-110 transition-all clip-chamfer-btn mt-2"

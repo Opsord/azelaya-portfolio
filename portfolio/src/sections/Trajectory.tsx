@@ -65,12 +65,12 @@ const Trajectory = () => {
                                     ) : (
                                         // Even index: bullets go on the left
                                         <ul className="font-sans text-sm text-on-surface-variant space-y-3">
-                                            {bullets.map((bullet, bIdx) => (
+                                            {bullets.map((bullet) => (
                                                 <li 
-                                                    key={bIdx} 
+                                                    key={bullet} 
                                                     className="flex items-start md:flex-row-reverse gap-3 text-left md:text-right"
                                                 >
-                                                    <span className="material-symbols-outlined icon-filled text-primary text-lg mt-0.5 shrink-0">
+                                                    <span className="material-symbols-outlined icon-filled text-primary text-lg leading-none mt-px shrink-0">
                                                         check_circle
                                                     </span>
                                                     <span>{bullet}</span>
@@ -103,9 +103,9 @@ const Trajectory = () => {
                                     ) : (
                                         // Odd index: bullets go on the right
                                         <ul className="font-sans text-sm text-on-surface-variant space-y-3">
-                                            {bullets.map((bullet, bIdx) => (
-                                                <li key={bIdx} className="flex items-start gap-3">
-                                                    <span className="material-symbols-outlined icon-filled text-primary text-lg mt-0.5 shrink-0">
+                                            {bullets.map((bullet) => (
+                                                <li key={bullet} className="flex items-start gap-3">
+                                                    <span className="material-symbols-outlined icon-filled text-primary text-lg leading-none mt-px shrink-0">
                                                         check_circle
                                                     </span>
                                                     <span>{bullet}</span>

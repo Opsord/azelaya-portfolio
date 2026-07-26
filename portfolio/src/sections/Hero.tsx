@@ -77,7 +77,7 @@ const Hero = () => {
                                 onError={(e) => {
                                     e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400";
                                 }}
-                                alt="Andrés Zelaya"
+                                alt="Andrés Zelaya Droguett"
                                 className="w-full h-full object-cover grayscale-20% hover:grayscale-0 transition-all duration-700 hover:scale-102"
                             />
                         </div>
