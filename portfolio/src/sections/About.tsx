@@ -56,43 +56,34 @@ const About = () => {
                         </h3>
 
                         <div className="flex flex-col gap-4 grow">
-                            {/* Card 1 */}
-                            <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5">
-                                <div className="flex items-start gap-4">
-                                    <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
-                                        <span className="material-symbols-outlined icon-filled text-3xl leading-none">
-                                            verified
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
-                                            {trad('about.philosophy1Title')}
-                                        </h4>
-                                        <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
-                                            {trad('about.philosophy1Desc')}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Card 2 */}
-                            <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5">
-                                <div className="flex items-start gap-4">
-                                    <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
-                                        <span className="material-symbols-outlined icon-filled text-3xl leading-none">
-                                            groups
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
-                                            {trad('about.philosophy2Title')}
-                                        </h4>
-                                        <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
-                                            {trad('about.philosophy2Desc')}
-                                        </p>
+                            {(
+                                [
+                                    { title: 'about.philosophy1Title', desc: 'about.philosophy1Desc', icon: 'schema' },
+                                    { title: 'about.philosophy2Title', desc: 'about.philosophy2Desc', icon: 'cloud_done' },
+                                    { title: 'about.philosophy3Title', desc: 'about.philosophy3Desc', icon: 'psychology' },
+                                ] as const
+                            ).map((item) => (
+                                <div
+                                    key={item.title}
+                                    className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5"
+                                >
+                                    <div className="flex items-start gap-4">
+                                        <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
+                                            <span className="material-symbols-outlined icon-filled text-3xl leading-none">
+                                                {item.icon}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
+                                                {trad(item.title)}
+                                            </h4>
+                                            <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
+                                                {trad(item.desc)}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

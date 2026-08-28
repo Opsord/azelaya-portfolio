@@ -28,7 +28,7 @@ const Hero = () => {
                     </h2>
                     <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-extrabold text-on-background mb-6 leading-[1.1] tracking-tight">
                         {trad('hero.heading').split(' ').map((word: string, i: number, arr: string[]) => {
-                            // Highlight the last two words or specifically "Architectural Precision" / "precisión arquitectónica"
+                            // Highlight the last two words of the heading
                             const isHighlight = i >= arr.length - 2;
                             return (
                                 <span key={word} className={isHighlight ? "text-primary" : ""}>
