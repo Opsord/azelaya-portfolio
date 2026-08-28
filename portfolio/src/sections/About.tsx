@@ -5,28 +5,19 @@ const About = () => {
     const { trad } = useLanguage();
 
     const languagesStack = [
-        { name: 'javascript' as const, label: 'JavaScript' },
-        { name: 'typescript' as const, label: 'TypeScript' },
         { name: 'java' as const, label: 'Java' },
-        { name: 'python' as const, label: 'Python' },
-        { name: 'html5' as const, label: 'HTML5' },
-        { name: 'css3' as const, label: 'CSS3' },
-        { name: 'react' as const, label: 'React' },
         { name: 'spring' as const, label: 'Spring' },
-        { name: 'nestjs' as const, label: 'NestJS' },
+        { name: 'typescript' as const, label: 'TypeScript' },
+        { name: 'react' as const, label: 'React' },
+        { name: 'python' as const, label: 'Python' },
+        { name: 'postgresql' as const, label: 'PostgreSQL' },
     ];
 
     const devopsStack = [
+        { name: 'googlecloud' as const, label: 'Google Cloud' },
         { name: 'docker' as const, label: 'Docker' },
-        { name: 'kubernetes' as const, label: 'Kubernetes' },
-        { name: 'jenkins' as const, label: 'Jenkins' },
-        { name: 'nginx' as const, label: 'Nginx' },
         { name: 'git' as const, label: 'Git' },
         { name: 'github' as const, label: 'GitHub' },
-        { name: 'postman' as const, label: 'Postman' },
-        { name: 'postgresql' as const, label: 'PostgreSQL' },
-        { name: 'mysql' as const, label: 'MySQL' },
-        { name: 'latex' as const, label: 'LaTeX' },
     ];
 
     return (
@@ -98,9 +89,9 @@ const About = () => {
                     <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm space-y-5">
                         <div>
                             <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
-                                Languages, Frameworks & Libraries
+                                {trad('about.stackLanguages')}
                             </span>
-                            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-2">
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2">
                                 {languagesStack.map((tech) => (
                                     <TechBadge
                                         key={tech.name}
@@ -112,9 +103,9 @@ const About = () => {
                         </div>
                         <div className="pt-3 border-t border-outline-variant/10">
                             <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
-                                DevOps, Databases & Tools
+                                {trad('about.stackCloud')}
                             </span>
-                            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-2">
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                 {devopsStack.map((tech) => (
                                     <TechBadge
                                         key={tech.name}

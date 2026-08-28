@@ -16,6 +16,8 @@ export const aboutTranslations = {
       activeStack: "Tech Tools"
     },
     techStack: "Tech Stack",
+    stackLanguages: "Languages & backend",
+    stackCloud: "Cloud & delivery",
     downloadCv: "Download CV"
   },
   es: {
@@ -35,6 +37,8 @@ export const aboutTranslations = {
       activeStack: "Herramientas Tech"
     },
     techStack: "Stack Tecnológico",
+    stackLanguages: "Lenguajes y backend",
+    stackCloud: "Cloud y entrega",
     downloadCv: "Descargar CV"
   }
 };
