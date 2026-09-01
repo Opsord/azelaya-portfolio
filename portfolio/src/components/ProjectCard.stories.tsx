@@ -14,29 +14,29 @@ export const Default: Story = {
   args: {
     title: 'Architecture Evaluator',
     repository: 'https://github.com/Opsord/architecture-evaluator',
-    description: 'A custom tool to analyze source code of monolithic Spring Boot applications using JavaParser.',
+    description: 'Undergraduate thesis: a static analyzer for monolithic Spring Boot codebases.',
     languages: ['Java'],
     tools: ['JavaParser', 'Spring Boot'],
-    role: 'FullStack Developer',
+    role: 'Author · thesis',
     tasks: [
-      'Tool design and development',
-      'Source code analysis',
-      'Detection of architectural bad practices'
+      'Designed and implemented the analyzer (Java / JavaParser)',
+      'Rules for architectural bad practices in Spring monoliths',
+      'Runnable against real Spring Boot source trees'
     ],
   },
 };
 
 export const WithoutRepo: Story = {
   args: {
-    title: 'Scrum Master & QA Automation',
-    description: 'Served as QA and Scrum Master in the development team at RosenmannLópez architecture firm.',
-    languages: ['JavaScript', 'TypeScript'],
-    tools: ['React', 'GitHub Actions', 'Docker', 'SonarCloud'],
-    role: 'QA & Scrum Master',
+    title: 'Cargoability',
+    description: 'B2B SaaS for international freight forwarding. I owned the backend and Google Cloud deployment.',
+    languages: ['Java'],
+    tools: ['Spring Boot', 'PostgreSQL', 'Google Cloud', 'Stripe', 'GCS'],
+    role: 'Backend & cloud',
     tasks: [
-      'Automation of CI/CD pipelines',
-      'Code quality reviews',
-      'Facilitating Scrum ceremonies'
+      'Modeled quoting and shipments with Incoterms',
+      'Domain events for email and SSE',
+      'GCS signed URLs and Stripe quotas'
     ],
   },
 };

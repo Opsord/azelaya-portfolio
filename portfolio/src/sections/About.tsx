@@ -5,28 +5,19 @@ const About = () => {
     const { trad } = useLanguage();
 
     const languagesStack = [
-        { name: 'javascript' as const, label: 'JavaScript' },
-        { name: 'typescript' as const, label: 'TypeScript' },
         { name: 'java' as const, label: 'Java' },
-        { name: 'python' as const, label: 'Python' },
-        { name: 'html5' as const, label: 'HTML5' },
-        { name: 'css3' as const, label: 'CSS3' },
-        { name: 'react' as const, label: 'React' },
         { name: 'spring' as const, label: 'Spring' },
-        { name: 'nestjs' as const, label: 'NestJS' },
+        { name: 'typescript' as const, label: 'TypeScript' },
+        { name: 'react' as const, label: 'React' },
+        { name: 'python' as const, label: 'Python' },
+        { name: 'postgresql' as const, label: 'PostgreSQL' },
     ];
 
     const devopsStack = [
+        { name: 'googlecloud' as const, label: 'Google Cloud' },
         { name: 'docker' as const, label: 'Docker' },
-        { name: 'kubernetes' as const, label: 'Kubernetes' },
-        { name: 'jenkins' as const, label: 'Jenkins' },
-        { name: 'nginx' as const, label: 'Nginx' },
         { name: 'git' as const, label: 'Git' },
         { name: 'github' as const, label: 'GitHub' },
-        { name: 'postman' as const, label: 'Postman' },
-        { name: 'postgresql' as const, label: 'PostgreSQL' },
-        { name: 'mysql' as const, label: 'MySQL' },
-        { name: 'latex' as const, label: 'LaTeX' },
     ];
 
     return (
@@ -56,43 +47,34 @@ const About = () => {
                         </h3>
 
                         <div className="flex flex-col gap-4 grow">
-                            {/* Card 1 */}
-                            <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5">
-                                <div className="flex items-start gap-4">
-                                    <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
-                                        <span className="material-symbols-outlined icon-filled text-3xl leading-none">
-                                            verified
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
-                                            {trad('about.philosophy1Title')}
-                                        </h4>
-                                        <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
-                                            {trad('about.philosophy1Desc')}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Card 2 */}
-                            <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5">
-                                <div className="flex items-start gap-4">
-                                    <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
-                                        <span className="material-symbols-outlined icon-filled text-3xl leading-none">
-                                            groups
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
-                                            {trad('about.philosophy2Title')}
-                                        </h4>
-                                        <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
-                                            {trad('about.philosophy2Desc')}
-                                        </p>
+                            {(
+                                [
+                                    { title: 'about.philosophy1Title', desc: 'about.philosophy1Desc', icon: 'schema' },
+                                    { title: 'about.philosophy2Title', desc: 'about.philosophy2Desc', icon: 'cloud_done' },
+                                    { title: 'about.philosophy3Title', desc: 'about.philosophy3Desc', icon: 'psychology' },
+                                ] as const
+                            ).map((item) => (
+                                <div
+                                    key={item.title}
+                                    className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm hover:border-primary/45 transition-all duration-300 group hover:shadow-lg hover:shadow-primary/5"
+                                >
+                                    <div className="flex items-start gap-4">
+                                        <div className="shrink-0 w-14 h-14 rounded-sm bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 flex items-center justify-center text-primary group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
+                                            <span className="material-symbols-outlined icon-filled text-3xl leading-none">
+                                                {item.icon}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h4 className="font-display text-base font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
+                                                {trad(item.title)}
+                                            </h4>
+                                            <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
+                                                {trad(item.desc)}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -107,9 +89,9 @@ const About = () => {
                     <div className="p-6 bg-surface-container border border-outline-variant/30 rounded-sm space-y-5">
                         <div>
                             <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
-                                Languages, Frameworks & Libraries
+                                {trad('about.stackLanguages')}
                             </span>
-                            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-2">
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2">
                                 {languagesStack.map((tech) => (
                                     <TechBadge
                                         key={tech.name}
@@ -121,9 +103,9 @@ const About = () => {
                         </div>
                         <div className="pt-3 border-t border-outline-variant/10">
                             <span className="font-mono text-[10px] text-primary uppercase font-bold tracking-wider block mb-3">
-                                DevOps, Databases & Tools
+                                {trad('about.stackCloud')}
                             </span>
-                            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-10 gap-2">
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                 {devopsStack.map((tech) => (
                                     <TechBadge
                                         key={tech.name}

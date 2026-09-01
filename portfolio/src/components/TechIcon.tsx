@@ -20,6 +20,7 @@ export type TechIconName =
   | 'postgresql'
   | 'mysql'
   | 'latex'
+  | 'googlecloud'
   | 'github-dark'
   | 'linkedin'
   | 'github-light';
@@ -46,6 +47,7 @@ const COLLECTION_MAP: Record<TechIconName, string> = {
   postgresql: 'devicon:postgresql',
   mysql: 'devicon:mysql',
   latex: 'devicon:latex',
+  googlecloud: 'devicon:googlecloud',
   linkedin: 'devicon:linkedin',
 };
 

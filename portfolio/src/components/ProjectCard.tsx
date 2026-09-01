@@ -94,7 +94,7 @@ const ProjectCard = ({
                 {/* Tasks List */}
                 <div className="space-y-1.5">
                     {tasks.map((task) => (
-                        <div key={task} className="flex items-center gap-2 text-xs text-on-surface-variant leading-normal">
+                        <div key={task} className="flex items-start gap-2 text-xs text-on-surface-variant leading-normal">
                             <span className="material-symbols-outlined icon-filled text-primary text-sm shrink-0 select-none">
                                 arrow_right
                             </span>
